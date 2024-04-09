@@ -1,0 +1,951 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: Robot, sans-serif, arial;
+    background: #f0f3fa;
+}
+
+.titlebar {
+    background: #2D2727;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.welcome_box {
+    width: 200px;
+    height: 40px;
+    float: left;
+    display: flex;
+}
+
+.welcome_box h3 {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+    font: bold;
+}
+
+
+
+.menulist {
+    float: right;
+    position: relative;
+    left: 60%;
+    display: flex;
+    color: white;
+    font:bold;
+}
+
+.menulist li {
+    list-style: none;
+    margin: 15px 25px;
+}
+
+.menulist li a {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.menulist li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #cc1b1b;
+  text-decoration-thickness: 3px;
+}
+
+
+.side_menu {
+    width: 15%;
+    height: fit-content;
+    display: block;
+}
+
+
+.width-15 {
+    width: 100%;
+    height: 650px;
+    float: left;
+    background: #282323;
+   
+}
+
+
+
+.student_menu {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    background: #690d0d;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.menu_div {
+    animation-name: side_menu;
+    animation-duration: 0.5s;
+    transition: all ease-in;
+    animation-iteration-count: 1;
+}
+
+@keyframes side_menu {
+    0% {
+        opacity: -5;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.student-detail {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #690d0d;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.update_pass_button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #690d0d;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+
+
+.stu_details {
+    display: none;
+    animation: animate 0.6s;
+    animation-name: student_detail;
+}
+
+@keyframes student_detail {
+    from {
+        transform: translatex(-8rem);
+    }
+
+    to {
+        transform: translatex(0rem);
+    }
+}
+
+.detail-list {
+    display: block;
+}
+.detail-list li {
+    width: 100%;
+    list-style: none;
+    width: 100%;
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 1px solid black;
+}
+
+
+.detail-list li button:hover {
+    background: linear-gradient(to right, #2196f3, #00aed9);
+    color: white;
+}
+
+/* css for the subjects buttons */
+/* main center div for all work */
+.main_center {
+    background-image: url(new_background.jpg);
+    background-size: cover;
+    width: 85%;
+    height: 650px;
+    position: absolute;
+    top: 8.45%;
+    left: 15%;
+}
+
+/* Message popup box for the student  */
+.popup-box {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    z-index: 1;
+    position: fixed;
+    left: 48.5%;
+    top: 48.5%;
+    background: white;
+    animation: animate 0.6s;
+}
+
+@keyframes animate {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.box-title {
+    background: linear-gradient(to right, #2196f3, #00aed9);
+    text-align: center;
+    width: auto;
+    height: 24px;
+}
+
+.box-content {
+    text-align: center;
+
+}
+
+.box-content h4 {
+    text-align: center;
+    padding: 25px 2px;
+    color: red;
+}
+
+.close-button {
+    font-size: 15px;
+    float: right;
+    border: 0.5px solid black;
+    font-weight: bold;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+
+.close-button:hover {
+    background: black;
+    color: white;
+}
+
+
+
+/* css for the update password box */
+.update_pass {
+    float: left;
+    width: 40%;
+    height: 330px;
+    position: relative;
+    margin: 150px 360px ;
+    cursor: auto;
+    border: 2px solid black;
+    background: #201111;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: none;
+    animation-name: update_pass;
+    animation-duration: 1s;
+}
+
+@keyframes update_pass {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+.pass_header {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.pass_header h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.update_close {
+    background: rgb(255, 255, 255);
+    font-size: 15px;
+    float: right;
+    border: 0.5px solid black;
+    font-weight: bold;
+    padding: 2px 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.update_close:hover {
+    color: white;
+    background-color: black;
+}
+
+.update_field {
+    display: block;
+    width: 80%;
+    height: fit-content;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.update_field input {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: transparent;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: #007adf;
+    outline: none;
+}
+
+.update_submit {
+    background: red;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 10px 65px;
+}
+
+.update_submit:hover {
+    background: green;
+    box-shadow: 0 0 20px 5px #3a3a3a;
+}
+
+/* css for the subject box div */
+.width-85 {
+    float: left;
+    width: 100%;
+    height: 650px;
+    position: static;
+    /* display: none; */
+}
+
+.all_subject {
+    width: 65%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 270px;
+    margin-top: 100px;
+    gap: 80px;
+}
+
+.all_button {
+    width: 220px;
+    height: 200px;
+    background: #282323;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.all_button:hover {
+    background: #2D2727;
+    border: 2px solid #690d0d;
+    box-shadow: 0 0 10px 10px #3f3939;
+}
+
+/* css for the VB.NET div  */
+
+.all_container {
+    width: 100%;
+    height: 630px;
+    display: none;
+}
+
+.close_btn {
+    width: 100%;
+    height: 29px;
+    position: relative;
+
+}
+
+.close_button {
+    background: rgb(0, 0, 0);
+    font-size: 16px;
+    float: right;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 2px 5px;
+    cursor: pointer;
+    margin-right: 45px;
+    margin-top: 2px;
+    color: white;
+}
+
+.close_button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+
+.vb_data {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* display: none; */
+}
+
+.cg_data {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: none;
+
+}
+
+.project_data {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.ecom_data {
+    width: 100%;
+    height: 620px;
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: none;
+}
+
+/* css for all the subjects details */
+.subject_teacher {
+    width: 350px;
+    height: 250px;
+    background:rgb(157, 152, 152);
+    margin: auto;
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+
+}
+
+.div_heading {
+    width: auto;
+    height: 30px;
+    background: #2D2727;
+    text-align-last: center;
+    border-bottom: 1px solid black;
+}
+
+.div_heading h3 {
+    padding: 3px;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.tcontainer {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    display: block;
+}
+
+.tcontainer .tbox:hover .timgbox {
+    transform: translate(-1.5rem, -1.5rem);
+}
+
+.tcontainer .tbox:hover .tcontent {
+    transform: translate(1.5rem, 2rem);
+}
+
+.tbox {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: 25px auto;
+}
+
+.timgbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+
+.tcontent {
+    background: #2D2727;
+    color: white;
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.h2t {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    z-index: 1;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.timgbox img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    resize: both;
+}
+
+
+
+
+/* vb attandance css */
+.your_attendance {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background:rgb(157, 152, 152);
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+}
+
+.atten_result {
+    width: 350px;
+}
+
+table {
+    border: 1px solid black;
+    height: 217px;
+}
+
+th {
+    color: white;
+    width: 250px;
+    height: 50px;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    height: 100px;
+}
+
+.atten_lectures {
+    background: rgb(13, 86, 13);
+    /* width: 300px; */
+}
+
+.atten_total {
+    background: #690d0d;
+}
+
+
+
+/* marks div of the vb */
+.your_marks {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background:rgb(157, 152, 152);
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+}
+
+.marks_result {
+    /* margin-top: 10px ; */
+    width: 350px;
+    max-height: 220px;
+    overflow: auto;
+}
+
+.marks_table {
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    max-height: 220px;
+}
+
+.marks_th_date {
+    background: #690d0d;
+    color: white;
+    width: 250px;
+    height: 30;
+}
+
+.marks_th_obtained {
+    background: rgb(13, 86, 13);
+    color: white;
+    width: 250px;
+    height: 30;
+}
+
+.marks_td {
+    border: 1px solid black;
+    text-align: center;
+    height: auto;
+}
+
+.data_not_found {
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* assignment div css */
+.your_assignment {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background:rgb(157, 152, 152);
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+
+}
+
+.assignment_result {
+    width: 350px;
+    max-height: 220px;
+    overflow: auto;
+}
+
+/* daily task div css */
+.daily_task {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background:rgb(157, 152, 152);
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+}
+
+.task_result {
+    width: 350px;
+    height: 218px;
+    overflow: auto;
+}
+
+.task_result h3 {
+    color: green;
+    margin: 10px;
+}
+
+
+/* doubt section  */
+.your_doubt {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    background:rgb(157, 152, 152);
+    border: 2px solid #611a1a;
+    border-radius: 5px;
+}
+
+.doubt_data {
+    width: 100%;
+    height: 218px;
+    overflow: auto;
+
+}
+
+.doubt_area {
+    margin: 10px 30px;
+    max-width: 285px;
+    max-height: 150px;
+}
+
+
+.doubt_submit {
+    position: relative;
+    top: -20%;
+    left: 10%;
+    background: red;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    /* margin-left: 35px; */
+    color: white;
+    cursor: pointer;
+}
+
+.doubt_submit:hover {
+    background: green;
+    box-shadow: 0 0 20px 5px #3a3a3a;
+}
+
+/* Check me main div */
+.doubt_container {
+    width: 700px;
+    height: 500px;
+    background: #2D2727;
+    position: relative;
+    left: 25%;
+    top: 10%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+    animation-name: doubt_container;
+    animation-duration: .8s;
+}
+@keyframes doubt_container {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.subject_list {
+    display: flex;
+}
+
+.ul_list {
+    display: flex;
+    list-style: none;
+    margin: 15px auto;
+}
+
+.ul_list li {
+    margin-left: 30px;
+}
+
+.ul_list li button {
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#vb_doubt_answer {
+    background: green;
+    color: white;
+}
+
+#cg_doubt_answer {
+    background: #7c1313;
+    color: white;
+}
+
+#project_doubt_answer {
+    background: rgb(91, 91, 3);
+    color: white;
+}
+
+#ecom_doubt_answer {
+    background: #007adf;
+    color: white;
+}
+
+.main_doubt_container {
+    margin-left: 5px;
+    position: absolute;
+    width: 690px;
+    height: 430px;
+    background: #c3d8ec;
+    overflow: auto;
+}
+
+.select_subject_doubt{
+    text-align: center;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 180px;
+    animation-name: select_button;
+    animation-duration: 1s;
+}
+@keyframes select_button {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#vb_doubt_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+.question_asked {
+    margin-top: 10px;
+}
+
+#cg_doubt_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+#project_doubt_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+#ecom_doubt_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+.no_answers{
+text-align: center;
+font-weight: bold;
+font-size: 38px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-top: 180px;
+animation-name: no_answer;
+animation-duration: 1s;
+}
+@keyframes no_answer {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+#add_notice_form{
+width: 700px;
+height: 400px;
+background: #5b5050;
+position: absolute;
+top: 15%;
+left: 20%;
+animation-name: notice_board;
+animation-duration: .8s;
+display: none;
+}
+@keyframes notice_board {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.notice_header{
+    width: 100%;
+    height: 50px;
+    background-color: #1e3799;
+}
+.notice_header h2{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+
+.notice_data{
+width: 690px;
+height:auto ;
+margin-left: 5px;
+max-height: 345px;
+overflow: auto;
+color: white;
+}
+
+.notice_th_date{
+    background: #7c1313;
+    color: white;
+    width: 150px;
+    height: 20px;
+}
+
+.notice_th_subject{
+    background-color:rgb(29, 29, 94);
+    color: white;
+    width: 80px;
+    height: 20px;
+}
+.notice_th_data{
+    background-color:  rgb(10, 67, 10);
+    color: white;
+    width: 470px;
+}
+.notice_tr{
+    height: 20px;
+}
+
+.notice_not_found{
+    text-align: center;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 130px;
+    animation-name: no_answer;
+    animation-duration: 1s;
+    }
+    @keyframes no_answer {
+        from {
+            transform: scale(0);
+        }
+    
+        to {
+            transform: scale(1);
+        }
+    }
+
+
+
+
+
+
+
+
+

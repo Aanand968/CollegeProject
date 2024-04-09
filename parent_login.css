@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: Robot, sans-serif, arial;
+    background: #f0f3fa;
+}
+
+.titlebar {
+    background: #2D2727;
+    width: 99.9%;
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+}
+
+
+.menu {
+    position: absolute;
+    left: 80%;
+}
+
+.menulist {
+    display: flex;
+}
+
+.menulist li {
+    margin: 15px 15px;
+    list-style: none;
+}
+
+.menulist li a {
+    padding: 5px 15px;
+    text-decoration: none;
+    color: White;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.menulist li a:hover {
+    text-decoration: underline;
+  text-decoration-color: #cc1b1b;
+  text-decoration-thickness: 3px;
+}
+.center_content{
+    display: flex;
+}
+.side_bar{
+    width: 15%;
+    height: 650px;
+    background: #2D2727;
+}
+.menu_heading button{
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+    font-weight: bold ;
+    font-size: 18px;
+    background: #690d0d;
+    cursor: pointer;
+    color: white;
+}
+.menu_heading button:hover{
+   background: #d8dfdf;
+   color: black;
+
+}
+
+.main_center{
+    width: 84.9%;
+    height: 650px;
+    background-image: url(bkimage5.jpg);
+    background-size: cover;
+    position:relative;
+}
+
+.marks_container{
+    width: 700px;
+    height: 500px;
+    background: #1b1f20;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    display: none;
+    animation-name: mark_container;
+    animation-duration: .6s;
+}
+@keyframes mark_container {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+.close_btn h2{
+text-align: center;
+padding: 5px;
+
+}
+
+.close_btn {
+    width: 100%;
+    height: 30px;
+    position: relative;
+
+}
+
+.close_button {
+    
+    font-size: 16px;
+    float: right;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 2px 5px;
+    cursor: pointer;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.close_button:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+
+.marks_result {
+    margin-top: 10px ;
+    width: 100%;
+    max-height: 460px;
+    margin-left: 5px;
+    overflow: auto;
+}
+
+.marks_table {
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+    max-height: 220px;
+}
+
+.marks_th_date {
+    background-color: rgb(55, 9, 9);
+    color: white;
+    width: 228px;
+    height: 20px;
+}
+.marks_th_subject{
+    background-color: rgb(9, 27, 68);
+    color: white;
+    width: 228px;
+
+
+}
+.marks_th_obtained {
+    background-color: rgb(7, 59, 7);
+    color: white;
+    width: 228px;
+}
+
+.marks_td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.data_not_found {
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+
+
+.atten_result {
+    width: 350px;
+}
+
+table {
+    border: 1px solid black;
+}
+
+th {
+    color: white;
+    width: 250px;
+    height: 70px;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    height: 30px;
+}
+
+.atten_lectures {
+    background: rgb(39, 74, 39);
+    width: 340px;
+height: 40px;
+}
+
+.atten_total {
+    width: 340px;
+    background: rgb(101, 53, 53);
+    height: 40px;
+}
+
+.atten_container {
+    width: 700px;
+    height: 500px;
+    background: #2D2727;
+    position: relative;
+    left: 25%;
+    top: 10%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+    animation-name: doubt_container;
+    animation-duration: .8s;
+}
+@keyframes doubt_container {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.subject_list {
+    display: flex;
+}
+
+.ul_list {
+    display: flex;
+    list-style: none;
+    margin: 15px auto;
+}
+
+.ul_list li {
+    margin-left: 30px;
+}
+
+.ul_list li button {
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#vb_doubt_answer {
+    background: green;
+    color: white;
+}
+
+#cg_doubt_answer {
+    background: red;
+    color: white;
+}
+
+#project_doubt_answer {
+    background: rgb(91, 91, 3);
+    color: white;
+}
+
+#ecom_doubt_answer {
+    background: #007adf;
+    color: white;
+}
+
+.main_atten_container {
+    margin-left: 5px;
+    position: absolute;
+    width: 690px;
+    height: 430px;
+    background: #c3d8ec;
+    overflow: auto;
+}
+
+#vb_atten_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+.question_asked {
+    margin-top: 10px;
+}
+
+#cg_atten_container{
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+#project_atten_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+#ecom_atten_container {
+    margin-left: 5px;
+    margin-top: 10px;
+    display: none;
+    position: relative;
+    width: 680px;
+}
+
+.no_answers{
+text-align: center;
+font-weight: bold;
+font-size: 38px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-top: 150px;
+
+animation-name: no_answer;
+animation-duration: 1s;
+}
+@keyframes no_answer {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+

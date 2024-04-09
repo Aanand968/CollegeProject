@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.name{
+padding: 10px auto;
+width: 100%;
+background-color:rgb(0,80,0);
+z-index: 1;
+}
+body{
+    background-image: url(6.jpg);
+     background-size: cover;
+     background-position: center;
+     
+     font-family:sans-serif;
+ }
+ .content{
+    background-color:rgb(0,100,0); 
+    text-align: center;
+}
+
+.content ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+
+.content ul li{
+     width: 120px;
+     margin: 15px;
+     padding: 15px;
+}
+
+.content ul li a{
+    text-decoration:none; 
+    color: rgb(255, 255, 255);
+}
+
+.content ul li a:hover{
+    background-color:rgb(0,160,0) ;
+    padding: 10px;
+ 
+}
+
+.login{
+    display: none;
+}
+.signup{
+    display: none;
+}
+
+.content ul li:hover .login{
+    display: block;
+    position: absolute; 
+    background-color:rgb(0,80,0); 
+    margin-top: 8px;
+    margin-left: -10px;  
+}
+
+.content ul li:hover .login a{
+    color:rgb(255, 255, 255) ;
+}
+.content ul li:hover .login ul{
+    display: block;
+    margin:10px;
+}
+
+.content ul li:hover .login ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid;
+}
+
+.content ul li:hover .signup{
+    display: block;
+    position: absolute;
+    background-color:rgb(0,80,0); 
+    margin-top: 8px;
+    margin-left: -10px;  
+}
+
+.content ul li:hover .signup ul{
+    display: block;
+    margin:10px;
+}
+
+.content ul li:hover .signup ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px  solid;
+}
